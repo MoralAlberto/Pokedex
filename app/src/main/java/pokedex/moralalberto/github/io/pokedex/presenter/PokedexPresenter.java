@@ -1,14 +1,16 @@
 package pokedex.moralalberto.github.io.pokedex.presenter;
 
-/**
- * Created by Moral on 23/7/16.
- */
+import java.util.List;
+
+import pokedex.moralalberto.github.io.pokedex.domain.model.Pokemon;
+
 public interface PokedexPresenter {
-    //Esto es un protocolo, aquí definimos
+
+    void onRequestPokemonList();
+
+    //  Esto es un protocolo, aquí definimos
     //  Vista para poder usarme a mi debes cumplir este contrato
     interface View {
-        void renderPokemons() {
-
-        }
+        void renderPokemons(List<Pokemon> pokemons);
     }
 }

@@ -1,13 +1,13 @@
-package pokedex.moralalberto.github.io.pokedex.domain.model;
+package pokedex.moralalberto.github.io.pokedex.data;
 
 
-public class Pokemon {
+public class PokemonData {
 
     private long id;
     private String imageUrl;
     private String name;
     private String description;
-    private Pokemon() { }
+    private PokemonData() { }
 
     public long getId() {
         return id;
@@ -27,30 +27,30 @@ public class Pokemon {
 
     // Dentro de cada clase POJO tenemos un builder para settear las propiedades
     public static class Builder {
-        private final Pokemon pokemon = new Pokemon();
+        private final PokemonData pokemonData = new PokemonData();
 
         public Builder setId(long id) {
-            pokemon.id = id;
+            pokemonData.id = id;
             return this;
         }
 
         public Builder setName(String name) {
-            pokemon.name = name;
+            pokemonData.name = name;
             return this;
         }
 
         public Builder setImageUrl(String imageUrl) {
-            pokemon.imageUrl = imageUrl;
+            pokemonData.imageUrl = imageUrl;
             return this;
         }
 
         public Builder setDescription(String description) {
-            pokemon.description = description;
+            pokemonData.description = description;
             return this;
         }
 
-        public Pokemon build() {
-            return pokemon;
+        public PokemonData build() {
+            return pokemonData;
         }
     }
 }
